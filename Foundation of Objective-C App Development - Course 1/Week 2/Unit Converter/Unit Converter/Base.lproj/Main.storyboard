@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Scz-qF-bAp">
+                                <rect key="frame" x="50" y="140" width="275" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="NG2-4K-XZ9"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="in Kilogram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vn5-G9-FIK">
+                                <rect key="frame" x="144.5" y="196" width="85.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DhZ-GI-ywf">
+                                <rect key="frame" x="68" y="233" width="239" height="29"/>
+                                <segments>
+                                    <segment title="Gram"/>
+                                    <segment title="Millegram"/>
+                                    <segment title="Microgram"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QMw-7s-z8K">
+                                <rect key="frame" x="155" y="293" width="64" height="30"/>
+                                <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wzg-Et-xHU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbH-ul-jhD">
+                                <rect key="frame" x="182" y="355" width="10.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CbH-ul-jhD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1ws-k9-lo0"/>
+                            <constraint firstItem="Scz-qF-bAp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4tQ-9G-l1z"/>
+                            <constraint firstItem="Scz-qF-bAp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="KtZ-7o-77f"/>
+                            <constraint firstItem="DhZ-GI-ywf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NBa-xO-Zwg"/>
+                            <constraint firstItem="vn5-G9-FIK" firstAttribute="top" secondItem="Scz-qF-bAp" secondAttribute="bottom" constant="16" id="RAd-OO-tRH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Scz-qF-bAp" secondAttribute="trailing" constant="50" id="ZJI-5W-OAq"/>
+                            <constraint firstItem="CbH-ul-jhD" firstAttribute="top" secondItem="QMw-7s-z8K" secondAttribute="bottom" constant="32" id="e2w-8q-AbL"/>
+                            <constraint firstItem="QMw-7s-z8K" firstAttribute="top" secondItem="DhZ-GI-ywf" secondAttribute="bottom" constant="32" id="jg5-bU-Fc3"/>
+                            <constraint firstItem="vn5-G9-FIK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ojq-QC-UZg"/>
+                            <constraint firstItem="Scz-qF-bAp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="t0n-uz-ZFu"/>
+                            <constraint firstItem="DhZ-GI-ywf" firstAttribute="top" secondItem="vn5-G9-FIK" secondAttribute="bottom" constant="16" id="wZm-cO-bGw"/>
+                            <constraint firstItem="QMw-7s-z8K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zxb-Wo-uxU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="convertResult" destination="CbH-ul-jhD" id="SCC-aP-DmU"/>
+                        <outlet property="convertTo" destination="DhZ-GI-ywf" id="4Uo-iM-iEa"/>
+                        <outlet property="valueToConvert" destination="Scz-qF-bAp" id="4jM-Hl-QNr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
